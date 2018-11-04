@@ -20,5 +20,5 @@ clean:
 	git submodule deinit --all
 
 .PHONY: update
-update:
+update: $(QUINN_FFI_TOML)
 	git submodule update --remote --merge
