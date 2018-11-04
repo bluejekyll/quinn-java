@@ -15,6 +15,7 @@ $(QUINN_FFI_H): $(QUINN_FFI_TOML)
 .PHONY: default
 default: $(QUINN_FFI_H)
 
+.PHONY: clean
 clean:
 	test -f quinn-ffi/Cargo.toml && cd quinn-ffi && cargo clean
 	git submodule deinit --all
