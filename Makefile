@@ -10,7 +10,7 @@ $(QUINN_FFI_TOML):
 # If the header is not available, build the path
 # TODO: this can be imroved to depend on all Rust source, and then it would rebuild...
 $(QUINN_FFI_H): $(QUINN_FFI_TOML)
-	cd quinn-ffi && cargo +stable build --release
+	cd quinn-ffi && cargo build --release
 
 .PHONY: default
 default: $(QUINN_FFI_H)

@@ -28,6 +28,42 @@
         <plugin.jacoco>0.7.9</plugin.jacoco>
     </properties>
 
+    <profiles>
+        <profile>
+            <id>Darwin-platform</id>
+            <activation>
+                <os>
+                    <family>Darwin</family>
+                </os>
+            </activation>
+            <properties>
+                <platform.family>Darwin</platform.family>
+            </properties>
+        </profile>
+        <profile>
+            <id>Linux-platform</id>
+            <activation>
+                <os>
+                    <family>Linux</family>
+                </os>
+            </activation>
+            <properties>
+                <platform.family>Linux</platform.family>
+            </properties>
+        </profile>
+        <profile>
+            <id>Windows-platform</id>
+            <activation>
+                <os>
+                    <family>Windows</family>
+                </os>
+            </activation>
+            <properties>
+                <platform.family>Windows</platform.family>
+            </properties>
+        </profile>
+    </profiles>
+
     <build>
         <plugins>
             <plugin>
@@ -93,6 +129,9 @@
                         <goals>
                             <goal>generate</goal>
                         </goals>
+                        <configuration>
+                            <config>src/main/jnaerator/${platform.family}.jnaerator</config>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>

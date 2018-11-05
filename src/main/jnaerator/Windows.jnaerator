@@ -1,0 +1,1 @@
+-jar jnaerator.jar quinn-ffi/target/release/libquinn_ffi.dll quinn-ffi/target/quinn_ffi.h -mode StandaloneJar
