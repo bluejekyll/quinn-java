@@ -23,9 +23,10 @@ clean:
 .PHONY: update
 update: $(QUINN_FFI_TOML)
 	git submodule update --remote --merge
-
+ 
 .PHONY: verify
 verify:
 	@git --version
 	@cargo --version
 	@rustc --version
+	

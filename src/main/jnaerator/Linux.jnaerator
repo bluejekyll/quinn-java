@@ -1,1 +1,1 @@
--jar jnaerator.jar quinn-ffi/target/release/libquinn_ffi.so quinn-ffi/target/quinn_ffi.h -mode StandaloneJar
+-jar jnaerator.jar quinn-ffi/target/quinn_ffi.h quinn-ffi/target/release/libquinn_ffi.so -rootPackage bluejekyll -nocpp -beautifyNames -arch linux_x64
